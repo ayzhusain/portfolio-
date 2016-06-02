@@ -28,6 +28,7 @@ namespace WindowsFormsApplication1
         enum GUI_STATE { TICKET_GUI, TERMINAL_GUI };
         GUI_STATE guiState;
 
+        private ButtonTimer yesButtonPresser;
 
         const decimal vuxen = 24.00m;
         const decimal barn = 14.00m;
@@ -41,7 +42,6 @@ namespace WindowsFormsApplication1
 
         private Gordion.Payment.GPayment m_paymentProvider;
         private int kiosk_ID = 1605;
-
 
         private string kiosk_IP = "127.0.0.1";
         private int kiosk_PORT = 6001;
@@ -69,6 +69,7 @@ namespace WindowsFormsApplication1
             m_bInit = false;
             guiState = GUI_STATE.TICKET_GUI;
             transCode = 48;
+            yesButtonPresser = new ButtonTimer(this, PressYesButton);
         }
 
         private PaymentTexts englishTexts, swedishTexts, polishTexts;
@@ -348,7 +349,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        void TimerEvent(object sender, EventArgs e)
+        void PressYesButton(object sender, EventArgs e)
         {
             m_paymentProvider.AnswerPositive();
         }
@@ -374,13 +375,7 @@ namespace WindowsFormsApplication1
                     btNo.Enabled = true;
                     if(paymentState == PaymentState.PS_FINISHED && --finishedCounter == 0)
                     {
-                        System.Timers.Timer timer = new System.Timers.Timer();
-                        timer.Interval = 100;
-                        timer.AutoReset = false;
-                        timer.Elapsed += TimerEvent;
-                        timer.SynchronizingObject = this;
-                        timer.Start();
-//                        m_paymentProvider.AnswerPositive();
+                        yesButtonPresser.Start();
                     }
                     break;
 
@@ -388,6 +383,10 @@ namespace WindowsFormsApplication1
                 case InfoEventType.BeforeStateChange:
                     paymentState = e.State;
                     ImageHandling();
+                    if(paymentState == PaymentState.PS_START)
+                    {
+                        yesButtonPresser.Start();
+                    }
                     break;
                 case InfoEventType.AfterStateChange:
                 case InfoEventType.Aborted:
@@ -719,7 +718,6 @@ namespace WindowsFormsApplication1
             {
                 if (totalprise == 0)
                 {
-
                     MessageBox.Show("Please select minimun one ticket... ");
                     return;
                 }
