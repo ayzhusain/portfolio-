@@ -383,12 +383,13 @@ namespace WindowsFormsApplication1
                 case InfoEventType.BeforeStateChange:
                     paymentState = e.State;
                     ImageHandling();
-                    if(paymentState == PaymentState.PS_START)
+                    break;
+                case InfoEventType.AfterStateChange:
+                    if (paymentState == PaymentState.PS_START)
                     {
                         yesButtonPresser.Start();
                     }
                     break;
-                case InfoEventType.AfterStateChange:
                 case InfoEventType.Aborted:
                     break;
 
