@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonTimer.cs" />
     <Compile Include="Lang\Langres.pl-PL.Designer.cs">
       <DependentUpon>Langres.pl-PL.resx</DependentUpon>
       <AutoGen>True</AutoGen>
