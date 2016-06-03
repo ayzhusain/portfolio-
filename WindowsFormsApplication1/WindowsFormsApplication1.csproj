@@ -59,7 +59,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gordion.Payment">
-      <HintPath>..\..\..\..\..\Desktop\Gordion.Payment.2.5.1 Release\Dll\.NET 4.6.1\Gordion.Payment.dll</HintPath>
+      <HintPath>Gordion.Payment\Gordion.Payment.dll</HintPath>
     </Reference>
     <Reference Include="sysglobl" />
     <Reference Include="System" />
@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonTimer.cs" />
     <Compile Include="Lang\Langres.pl-PL.Designer.cs">
       <DependentUpon>Langres.pl-PL.resx</DependentUpon>
       <AutoGen>True</AutoGen>

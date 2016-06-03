@@ -28,6 +28,7 @@ namespace WindowsFormsApplication1
         enum GUI_STATE { TICKET_GUI, TERMINAL_GUI };
         GUI_STATE guiState;
 
+        private ButtonTimer yesButtonPresser;
 
         const decimal vuxen = 24.00m;
         const decimal barn = 14.00m;
@@ -41,7 +42,6 @@ namespace WindowsFormsApplication1
 
         private Gordion.Payment.GPayment m_paymentProvider;
         private int kiosk_ID = 1605;
-
 
         private string kiosk_IP = "127.0.0.1";
         private int kiosk_PORT = 6001;
@@ -72,16 +72,14 @@ namespace WindowsFormsApplication1
             m_bInit = false;
             guiState = GUI_STATE.TICKET_GUI;
             transCode = 48;
-
-
+            yesButtonPresser = new ButtonTimer(this, PressYesButton);
         }
 
         private PaymentTexts englishTexts, swedishTexts, polishTexts;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-
+            DoubleBuffered = true;
             if (m_bInit) return;
 
             if (m_paymentProvider == null)
@@ -237,7 +235,7 @@ namespace WindowsFormsApplication1
                     lbRow3.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
                 }
 
-            }
+        }
 
            
 
@@ -256,17 +254,17 @@ namespace WindowsFormsApplication1
             //ReplaceFont(this.Controls, pfc.Families[0]);
 
         }
-        //private void ReplaceFont(ControlCollection oCtrls, Font oFont)
-        //{
+            //private void ReplaceFont(ControlCollection oCtrls, Font oFont)
+            //{
 
-        //    foreach (Control c in oCtrls)
-        //    {
-        //        c.Font = new Font(oFont, c.Font.Size, c.Font.Style);
+            //    foreach (Control c in oCtrls)
+            //    {
+            //        c.Font = new Font(oFont, c.Font.Size, c.Font.Style);
 
-        //        if (c.Controls.Count > 0)
-        //            ReplaceFont(c.Controls, oFont);
-        //    }
-        //}
+            //        if (c.Controls.Count > 0)
+            //            ReplaceFont(c.Controls, oFont);
+            //    }
+            //}
         private void InitializeTranslations()
         {
             englishTexts = new PaymentTexts(44);
@@ -419,7 +417,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        void TimerEvent(object sender, EventArgs e)
+        void PressYesButton(object sender, EventArgs e)
         {
             m_paymentProvider.AnswerPositive();
         }
@@ -445,13 +443,7 @@ namespace WindowsFormsApplication1
                     btNo.Enabled = true;
                     if(paymentState == PaymentState.PS_FINISHED && --finishedCounter == 0)
                     {
-                        System.Timers.Timer timer = new System.Timers.Timer();
-                        timer.Interval = 100;
-                        timer.AutoReset = false;
-                        timer.Elapsed += TimerEvent;
-                        timer.SynchronizingObject = this;
-                        timer.Start();
-//                        m_paymentProvider.AnswerPositive();
+                        yesButtonPresser.Start();
                     }
                     break;
 
@@ -461,6 +453,11 @@ namespace WindowsFormsApplication1
                     ImageHandling();
                     break;
                 case InfoEventType.AfterStateChange:
+                    if (paymentState == PaymentState.PS_START)
+                    {
+                        yesButtonPresser.Start();
+                    }
+                    break;
                 case InfoEventType.Aborted:
                     break;
 
@@ -790,7 +787,6 @@ namespace WindowsFormsApplication1
             {
                 if (totalprise == 0)
                 {
-
                     MessageBox.Show("Please select minimun one ticket... ");
                     return;
                 }
@@ -1238,7 +1234,7 @@ namespace WindowsFormsApplication1
         //Translation ..........................................................
         private void getRes(CultureInfo ci)
         {
-            Assembly a = Assembly.Load("WindowsFormsApplication1");            
+            Assembly a = Assembly.Load("WindowsFormsApplication1");
             ResourceManager rm = new ResourceManager("WindowsFormsApplication1.Lang.Langres", a);
            
 
