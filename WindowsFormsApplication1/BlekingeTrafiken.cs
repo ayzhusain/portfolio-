@@ -76,6 +76,7 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            DoubleBuffered = true;
             if (m_bInit) return;
 
             if (m_paymentProvider == null)
