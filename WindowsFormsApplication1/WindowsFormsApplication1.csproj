@@ -143,10 +143,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="bin\Debug\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BFB_____.TTF" />
     <None Include="Resources\BFM_____.PFM" />
-    <None Include="Resources\BFM_____.TTF" />
+    <EmbeddedResource Include="Resources\BFM_____.TTF" />
     <None Include="Resources\fambtn.png" />
   </ItemGroup>
   <ItemGroup>
@@ -193,12 +196,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\images\keypad111.png" />
     <None Include="Resources\BackG_ticketTitel.JPG" />
     <Content Include="Resources\keypad.gif" />
     <Content Include="Resources\keypad111.png" />
-    <None Include="bin\Debug\images\CardRemove.gif" />
-    <None Include="bin\Debug\images\insertCardImage.gif" />
     <Content Include="images\bg_no_flags.jpg" />
     <Content Include="images\CardInser.gif" />
     <Content Include="images\CardInsert.gif">

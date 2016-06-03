@@ -167,4 +167,22 @@
   <data name="barnBtnPrisLable" xml:space="preserve">
     <value>Year</value>
   </data>
+  <data name="btNo" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btYes" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="lbHeader" xml:space="preserve">
+    <value>Click on Continue button</value>
+  </data>
+  <data name="lbRow1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbRow2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbRow3" xml:space="preserve">
+    <value />
+  </data>
 </root>

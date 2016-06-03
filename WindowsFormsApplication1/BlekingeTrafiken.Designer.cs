@@ -39,10 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbCountDown = new System.Windows.Forms.Label();
             this.TotalPristLb = new System.Windows.Forms.Label();
-            this.lbRow3 = new System.Windows.Forms.Label();
             this.TotalPris = new System.Windows.Forms.Label();
-            this.lbRow2 = new System.Windows.Forms.Label();
-            this.lbRow1 = new System.Windows.Forms.Label();
             this.noofDF_Total = new System.Windows.Forms.Label();
             this.noofB_Total = new System.Windows.Forms.Label();
             this.noofV_Total = new System.Windows.Forms.Label();
@@ -53,6 +50,9 @@
             this.barntLb = new System.Windows.Forms.Label();
             this.VuxentLb = new System.Windows.Forms.Label();
             this.TicketTitle = new System.Windows.Forms.Label();
+            this.lbRow3 = new System.Windows.Forms.Label();
+            this.lbRow2 = new System.Windows.Forms.Label();
+            this.lbRow1 = new System.Windows.Forms.Label();
             this.button6Poland = new System.Windows.Forms.Button();
             this.button7Swedish = new System.Windows.Forms.Button();
             this.button8English = new System.Windows.Forms.Button();
@@ -190,87 +190,77 @@
             resources.ApplyResources(this.TotalPristLb, "TotalPristLb");
             this.TotalPristLb.ForeColor = System.Drawing.Color.Black;
             this.TotalPristLb.Name = "TotalPristLb";
-            // 
-            // lbRow3
-            // 
-            resources.ApplyResources(this.lbRow3, "lbRow3");
-            this.lbRow3.BackColor = System.Drawing.Color.Transparent;
-            this.lbRow3.ForeColor = System.Drawing.Color.Black;
-            this.lbRow3.Name = "lbRow3";
+            this.TotalPristLb.UseCompatibleTextRendering = true;
             // 
             // TotalPris
             // 
             resources.ApplyResources(this.TotalPris, "TotalPris");
             this.TotalPris.ForeColor = System.Drawing.Color.Black;
             this.TotalPris.Name = "TotalPris";
-            // 
-            // lbRow2
-            // 
-            resources.ApplyResources(this.lbRow2, "lbRow2");
-            this.lbRow2.BackColor = System.Drawing.Color.Transparent;
-            this.lbRow2.ForeColor = System.Drawing.Color.Black;
-            this.lbRow2.Name = "lbRow2";
-            // 
-            // lbRow1
-            // 
-            resources.ApplyResources(this.lbRow1, "lbRow1");
-            this.lbRow1.BackColor = System.Drawing.Color.Transparent;
-            this.lbRow1.ForeColor = System.Drawing.Color.Black;
-            this.lbRow1.Name = "lbRow1";
+            this.TotalPris.UseCompatibleTextRendering = true;
             // 
             // noofDF_Total
             // 
             resources.ApplyResources(this.noofDF_Total, "noofDF_Total");
             this.noofDF_Total.ForeColor = System.Drawing.Color.Black;
             this.noofDF_Total.Name = "noofDF_Total";
+            this.noofDF_Total.UseCompatibleTextRendering = true;
             // 
             // noofB_Total
             // 
             resources.ApplyResources(this.noofB_Total, "noofB_Total");
             this.noofB_Total.ForeColor = System.Drawing.Color.Black;
             this.noofB_Total.Name = "noofB_Total";
+            this.noofB_Total.UseCompatibleTextRendering = true;
             // 
             // noofV_Total
             // 
             resources.ApplyResources(this.noofV_Total, "noofV_Total");
             this.noofV_Total.ForeColor = System.Drawing.Color.Black;
             this.noofV_Total.Name = "noofV_Total";
+            this.noofV_Total.UseCompatibleTextRendering = true;
             // 
             // noofDF
             // 
             resources.ApplyResources(this.noofDF, "noofDF");
             this.noofDF.ForeColor = System.Drawing.Color.Black;
             this.noofDF.Name = "noofDF";
+            this.noofDF.UseCompatibleTextRendering = true;
             // 
             // noofBung
             // 
             resources.ApplyResources(this.noofBung, "noofBung");
             this.noofBung.ForeColor = System.Drawing.Color.Black;
             this.noofBung.Name = "noofBung";
+            this.noofBung.UseCompatibleTextRendering = true;
             // 
             // noofV
             // 
             resources.ApplyResources(this.noofV, "noofV");
             this.noofV.ForeColor = System.Drawing.Color.Black;
             this.noofV.Name = "noofV";
+            this.noofV.UseCompatibleTextRendering = true;
             // 
             // familjtLb
             // 
             resources.ApplyResources(this.familjtLb, "familjtLb");
             this.familjtLb.ForeColor = System.Drawing.Color.Black;
             this.familjtLb.Name = "familjtLb";
+            this.familjtLb.UseCompatibleTextRendering = true;
             // 
             // barntLb
             // 
             resources.ApplyResources(this.barntLb, "barntLb");
             this.barntLb.ForeColor = System.Drawing.Color.Black;
             this.barntLb.Name = "barntLb";
+            this.barntLb.UseCompatibleTextRendering = true;
             // 
             // VuxentLb
             // 
             resources.ApplyResources(this.VuxentLb, "VuxentLb");
             this.VuxentLb.ForeColor = System.Drawing.Color.Black;
             this.VuxentLb.Name = "VuxentLb";
+            this.VuxentLb.UseCompatibleTextRendering = true;
             // 
             // TicketTitle
             // 
@@ -279,6 +269,30 @@
             this.TicketTitle.ForeColor = System.Drawing.Color.White;
             this.TicketTitle.Image = global::WindowsFormsApplication1.Properties.Resources.BackG_ticketTitel;
             this.TicketTitle.Name = "TicketTitle";
+            // 
+            // lbRow3
+            // 
+            resources.ApplyResources(this.lbRow3, "lbRow3");
+            this.lbRow3.BackColor = System.Drawing.Color.Transparent;
+            this.lbRow3.ForeColor = System.Drawing.Color.Black;
+            this.lbRow3.Name = "lbRow3";
+            this.lbRow3.UseCompatibleTextRendering = true;
+            // 
+            // lbRow2
+            // 
+            resources.ApplyResources(this.lbRow2, "lbRow2");
+            this.lbRow2.BackColor = System.Drawing.Color.Transparent;
+            this.lbRow2.ForeColor = System.Drawing.Color.Black;
+            this.lbRow2.Name = "lbRow2";
+            this.lbRow2.UseCompatibleTextRendering = true;
+            // 
+            // lbRow1
+            // 
+            resources.ApplyResources(this.lbRow1, "lbRow1");
+            this.lbRow1.BackColor = System.Drawing.Color.Transparent;
+            this.lbRow1.ForeColor = System.Drawing.Color.Black;
+            this.lbRow1.Name = "lbRow1";
+            this.lbRow1.UseCompatibleTextRendering = true;
             // 
             // button6Poland
             // 
@@ -307,19 +321,23 @@
             // label1
             // 
             this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.ColumnHeader;
-            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.CausesValidation = false;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            this.label1.UseCompatibleTextRendering = true;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.CausesValidation = false;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            this.label2.UseCompatibleTextRendering = true;
             // 
             // vuxenBtnPrisLable
             // 
@@ -328,6 +346,7 @@
             this.vuxenBtnPrisLable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vuxenBtnPrisLable.ForeColor = System.Drawing.Color.White;
             this.vuxenBtnPrisLable.Name = "vuxenBtnPrisLable";
+            this.vuxenBtnPrisLable.UseCompatibleTextRendering = true;
             this.vuxenBtnPrisLable.Click += new System.EventHandler(this.button1_Click);
             // 
             // barnBtnPrisLable
@@ -337,6 +356,7 @@
             this.barnBtnPrisLable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.barnBtnPrisLable.ForeColor = System.Drawing.Color.White;
             this.barnBtnPrisLable.Name = "barnBtnPrisLable";
+            this.barnBtnPrisLable.UseCompatibleTextRendering = true;
             this.barnBtnPrisLable.Click += new System.EventHandler(this.button2_Click);
             // 
             // familjBtnPrisLable
@@ -348,6 +368,7 @@
             this.familjBtnPrisLable.Image = global::WindowsFormsApplication1.Properties.Resources.kidbtn;
             this.familjBtnPrisLable.Name = "familjBtnPrisLable";
             this.familjBtnPrisLable.Tag = "";
+            this.familjBtnPrisLable.UseCompatibleTextRendering = true;
             this.familjBtnPrisLable.Click += new System.EventHandler(this.button3_Click);
             // 
             // lbHeader
@@ -355,6 +376,7 @@
             resources.ApplyResources(this.lbHeader, "lbHeader");
             this.lbHeader.BackColor = System.Drawing.Color.Transparent;
             this.lbHeader.Name = "lbHeader";
+            this.lbHeader.UseCompatibleTextRendering = true;
             // 
             // lbPin
             // 
@@ -388,6 +410,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.CausesValidation = false;
             this.Controls.Add(this.barnBtnPrisLable);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.vuxenBtnPrisLable);

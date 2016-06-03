@@ -18,7 +18,7 @@ using System.Collections;
 using System.Security.Cryptography;
 using System.Resources;
 using Gordion.Payment;
-
+using System.Runtime.InteropServices;
 
 namespace WindowsFormsApplication1
 {
@@ -61,20 +61,27 @@ namespace WindowsFormsApplication1
         private PaymentState paymentState;
         private int finishedCounter;
 
+        
         public BlekingeTrafiken()
         {
+
             InitializeComponent();
+
 
             InitPayment(GPayment.PaymentProvider.NetsBAXI);
             m_bInit = false;
             guiState = GUI_STATE.TICKET_GUI;
             transCode = 48;
+
+
         }
 
         private PaymentTexts englishTexts, swedishTexts, polishTexts;
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+
             if (m_bInit) return;
 
             if (m_paymentProvider == null)
@@ -137,65 +144,136 @@ namespace WindowsFormsApplication1
 
             }
 
-            //Custom Font... Bermeno
-            //PrivateFontCollection pfc = new PrivateFontCollection();
-            //pfc.AddFontFile("C:/Users/Ayazhussain/Desktop/BiljittTerminalData/BarmenoFull/BFM_____.TTF");
-            ////pfc.AddFontFile("WindowsFormsApplication1/WindowsFormsApplication1/Resources/BFB_____.PFM");
-            ////pfc.AddFontFile(Properties.Resources.ResourceManager.GetString("C:\Users\Ayazhussain\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\Resources\BFB_____.PFM"));
-            //foreach (Control c in this.Controls)
-            //{
-            //    //c.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
-            //    c.Font = new Font(pfc.Families[0], c.Font.Size, c.Font.Style);
-            //    barnBtnPrisLable.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //    barntLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //    familjBtnPrisLable.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //    familjtLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //    groupBox1.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //    TotalPristLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //    VuxentLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-
-            //    label1.Font = new Font(pfc.Families[0], 36, FontStyle.Regular);
-            //    label2.Font = new Font(pfc.Families[0], 24, FontStyle.Regular);
-            //    lbHeader.Font = new Font(pfc.Families[0], 20, FontStyle.Regular);
-            //    lbRow1.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //    lbRow2.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //    lbRow3.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //}
-
             //Button Price Lables
             vuxenBtnPrisLable.Text = vuxen.ToString() + " SEK";
             barnBtnPrisLable.Text = "7 - 19 år" + "\n" + barn.ToString() + " SEK";
             familjBtnPrisLable.Text = "2 Vuxen + 3 Barn " + "\n" + familj.ToString() + " SEK";
 
+            //Custom Font... Bermeno
+
+            //PrivateFontCollection pfc = new PrivateFontCollection();
+            //pfc.AddFontFile("C:/Users/Ayazhussain/Desktop/BiljittTerminalData/BarmenoFull/BFM_____.TTF");
+
+            //foreach (Control c in this.Controls)
+            //{
+            //    c.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
+            //    //c.Font = new Font(pfc.Families[0], c.Font.Size, c.Font.Style);
+
+            //}
+
+            //barnBtnPrisLable.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //barntLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //familjBtnPrisLable.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //familjtLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //groupBox1.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //TotalPristLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //VuxentLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+
+            //label1.Font = new Font(pfc.Families[0], 36, FontStyle.Regular);
+            //label2.Font = new Font(pfc.Families[0], 24, FontStyle.Regular);
+            //lbHeader.Font = new Font(pfc.Families[0], 20, FontStyle.Regular);
+            //lbRow1.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //lbRow2.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //lbRow3.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+
+            
+
             InitializeTranslations();
-            //ReplaceFonts();
+            ReplaceFonts();
         }
 
-            //private void ReplaceFonts()
-            //{
-            //    PrivateFontCollection pfc = new PrivateFontCollection();
-            //    pfc.AddFontFile("C:/Users/Ayazhussain/Desktop/BiljittTerminalData/BarmenoFull/BFB_____.ttf");
 
-            //    ReplaceFont(this.Controls, pfc.Families[0]);
+
+        private void ReplaceFonts()
+        {
+            PrivateFontCollection pfc = new PrivateFontCollection();
+
+            //// specify embedded resource name
+            //string resource = "WindowsFormsApplication1.BFM_____.TTF";
+
+            //// receive resource stream
+            //Stream fontStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource);
+
+            //// create an unsafe memory block for the font data
+            //System.IntPtr data = Marshal.AllocCoTaskMem((int)fontStream.Length);
+
+            //// create a buffer to read in to
+            //byte[] fontdata = new byte[fontStream.Length];
+
+            //// read the font data from the resource
+            //fontStream.Read(fontdata, 0, (int)fontStream.Length);
+
+            //// copy the bytes to the unsafe memory block
+            //Marshal.Copy(fontdata, 0, data, (int)fontStream.Length);
+
+            //// pass the font to the font collection
+            //pfc.AddMemoryFont(data, (int)fontStream.Length);
+
+            //// close the resource stream
+            //fontStream.Close();
+
+            //// free up the unsafe memory
+            //Marshal.FreeCoTaskMem(data);
+             pfc.AddFontFile("../../Resources/BFB_____.ttf");
+            foreach (Control c in this.Controls)
+            {
+                c.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
+                //c.Font = new Font(pfc.Families[0], c.Font.Size, c.Font.Style); 
+
+                if (string.IsNullOrWhiteSpace(c.Text))
+                {
+                    barntLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+
+                    familjtLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+                    groupBox1.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+                    TotalPristLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+                    VuxentLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+
+                    label1.Font = new Font(pfc.Families[0], 36, FontStyle.Regular);
+                    label2.Font = new Font(pfc.Families[0], 24, FontStyle.Regular);
+                    lbHeader.Font = new Font(pfc.Families[0], 20, FontStyle.Regular);
+                    lbRow1.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+                    lbRow2.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+                    lbRow3.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+                }
+
+            }
+
+           
+
+            //PrivateFontCollection pfc = new PrivateFontCollection();
+           
+
+            //foreach (Control c in this.Controls)
+            //{
+            //    //c.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
+            //    c.Font = new Font(pfc.Families[0], c.Font.Size, c.Font.Style);
 
             //}
-            //private void ReplaceFont(ControlCollection oCtrls, Font oFont)
-            //{
 
-            //    foreach (Control c in oCtrls)
-            //    {
-            //        c.Font = new Font(oFont, c.Font.Size, c.Font.Style);
 
-            //        if (c.Controls.Count > 0)
-            //            ReplaceFont(c.Controls, oFont);
-            //    }
-            //}
+
+            //ReplaceFont(this.Controls, pfc.Families[0]);
+
+        }
+        //private void ReplaceFont(ControlCollection oCtrls, Font oFont)
+        //{
+
+        //    foreach (Control c in oCtrls)
+        //    {
+        //        c.Font = new Font(oFont, c.Font.Size, c.Font.Style);
+
+        //        if (c.Controls.Count > 0)
+        //            ReplaceFont(c.Controls, oFont);
+        //    }
+        //}
         private void InitializeTranslations()
         {
             englishTexts = new PaymentTexts(44);
             swedishTexts = new PaymentTexts(46);
             polishTexts = new PaymentTexts(48);
-
+            InitializeEnglishTranslation(englishTexts);
+            InitializePolishTranslation(polishTexts);
         }
 
         private void Status(object info, int v1, string v2)
@@ -227,17 +305,10 @@ namespace WindowsFormsApplication1
             {
                 sHeadertext.Append("Familj / Rodzina / Family\n");
             }
-            sHeadertext.Append(string.Format("\n{0} SEK\n\nGiltig Till\n{1} kl {2}\n-----------------------------------------", totalprise, DateTime.Now.AddDays(1).ToString("yyyy-MM-dd"), DateTime.Now.AddDays(1).ToString("HH:mm")));
+            sHeadertext.Append(string.Format("\n{0} SEK\n\nGiltig Till/Ważne do/Valid to\n{1} kl {2}\n-----------------------------------------", totalprise, DateTime.Now.AddDays(1).ToString("yyyy-MM-dd"), DateTime.Now.AddDays(1).ToString("HH:mm")));
             return sHeadertext.ToString();
         }
 
-        //private String GetReceiptFooter()
-        //{
-        //    StringBuilder sFootertext = new StringBuilder("-----------------------------------------\n\nBlekingetrafiken\n\nwww.blekingetrafiken.se\nValhallavägen 1 \n33 140  Karlskrona\n0455 569 00\n\n-----------------------------------------");
-
-        //    return sFootertext.ToString();
-
-        //}
 
 
         //Payment Method 
@@ -274,7 +345,7 @@ namespace WindowsFormsApplication1
             //Choose default language of the interface
             //Change the texts if you have any other texts to present
             //Texts can also be changed right before payment if you need to change it on the fly.
-            m_paymentProvider.Texts = new PaymentTexts(46);
+            //m_paymentProvider.Texts = new PaymentTexts(46);
 
             //Choose the default language to print on the receipts, this should just be set upon initialization 
             //to not confuse customers with multiple languages on the receipts.
@@ -289,7 +360,7 @@ namespace WindowsFormsApplication1
             string ftagNamn = "Blekingetrafiken";
             string ftageAdd = "";
             string ftagCity = "www.blekingetrafiken.se";
-            string ftagFon = "+46 0455 569 00";
+            string ftagFon = "+46 455 569 00";
 
             m_paymentProvider.Receipts.SetMerchantData(ftagNamn,ftageAdd,ftagCity,ftagFon,"");
 
@@ -498,7 +569,7 @@ namespace WindowsFormsApplication1
 
             
             m_paymentProvider.Receipts.SetHeader(GetReceiptHeader(), "Köpet Avbrutet!", "Köpet Medges Ej!");
-            m_paymentProvider.Receipts.SetFooter("Välkommen åter!", "Försök gärna igen!", "Tyvärr, försök igen!");
+            m_paymentProvider.Receipts.SetFooter("Biljetten gäller 24 timmar\nBilet jest ważny przez 24 godzin\nTrevlig resa/Miła wycieczka!", "Försök gärna igen!", "Tyvärr, försök igen!");
             
             //Display info text
             //m_paymentProvider.SetText("Test", "You can change the text in the ProduceProduct Event", "", "This is an info text.", " ", true, true);
@@ -844,7 +915,7 @@ namespace WindowsFormsApplication1
             }
             else if(transCode == 48)
             {
-                Polish_Lables_Translation();
+                //Polish_Lables_Translation();
             }
             else
             {
@@ -862,10 +933,10 @@ namespace WindowsFormsApplication1
 
             if (textFlag == 0)
             {
-                tranText.Produce.Header = "Click on the Continue Button :";
-                tranText.Produce.Row1 = "Bus ticket";
-                tranText.Produce.Row2 = "Total amount to pay : " + totalprise + " SEK ";
-                tranText.Produce.Row3 = "Amount will be deducted from your account.";
+                tranText.Produce.Header = "Kliknij przycisk Kontynuuj:";
+                tranText.Produce.Row1 = "Kup bilet autobusowy";
+                tranText.Produce.Row2 = "Całkowita kwota do zapłaty : " + totalprise + " SEK ";
+                tranText.Produce.Row3 = "Kwota zostanie odjęta od twojej karty.";
 
                 lbHeader.Text = tranText.Produce.Header;
                 lbRow1.Text = tranText.Produce.Row1;
@@ -1018,7 +1089,7 @@ namespace WindowsFormsApplication1
             PaymentTexts.cCard Card = tranText.Card;
             PaymentTexts.cPIN Pin = tranText.PIN;
 
-            tranText.Start.Header = "Click on the Continue Button:";
+            tranText.Start.Header = "Click on the Continue Button Hejhopp:";
             tranText.Start.Row1 = "Bus ticket";
             //tranText.Start.Row2 = "Total amount to pay : " + totalprise + " SEK ";
             tranText.Start.Row3 = "Amount will be deducted from your account.";
@@ -1030,6 +1101,18 @@ namespace WindowsFormsApplication1
 
             Pin.Header = "Enter your card PIN..";
             Pin.Row3 = "Press OK, on the keypad..";
+        }
+
+        private void InitializePolishTranslation(PaymentTexts tranText)
+        {
+            tranText.Start.Yes = "Yes";
+            tranText.Start.No = "No";
+            tranText.Start.Header = "Kliknij przycisk Kontynuuj:";
+            tranText.Start.Row1 = "Kup bilet autobusowy";
+            //tranText.Start.Row2 = "Całkowita kwota do zapłaty : " + totalprise + " SEK ";
+            tranText.Start.Row3 = "Kwota zostanie odjęta od twojej karty.";
+
+            tranText.Card.Header = "Insert your card";
         }
 
         private void ImageHandling()
@@ -1155,8 +1238,10 @@ namespace WindowsFormsApplication1
         //Translation ..........................................................
         private void getRes(CultureInfo ci)
         {
-            Assembly a = Assembly.Load("WindowsFormsApplication1");
+            Assembly a = Assembly.Load("WindowsFormsApplication1");            
             ResourceManager rm = new ResourceManager("WindowsFormsApplication1.Lang.Langres", a);
+           
+
             label1.Text = rm.GetString("label1", ci);
             label2.Text = rm.GetString("label2", ci);
             TicketTitle.Text = rm.GetString("TicketTitle", ci);
@@ -1169,8 +1254,55 @@ namespace WindowsFormsApplication1
             btnVuxen.Text = rm.GetString("button1", ci);
             button2.Text = rm.GetString("button2", ci);
             button3.Text = rm.GetString("button3", ci);
+
+            //button4 = rm.GetString("button4_Click", ci);
+            //button5.Text = rm.GetString("btYes", ci);
+
             btNo.Text = rm.GetString("button4", ci);
             btYes.Text = rm.GetString("button5", ci);
+
+            //if (paymentState == PaymentState.PS_START)
+            //{
+            //    lbHeader.Text = rm.GetString("lbHeader", ci);
+            //}
+            //else if (paymentState == PaymentState.PS_CARD)
+            //{
+            //    lbHeader.Text = rm.GetString("lbHeader", ci);
+            //    lbRow1.Text = "label1";
+            //    lbRow2.Text = "label1";
+            //    lbRow3.Text = "label1";
+            //}
+
+            //else if (paymentState == PaymentState.PS_TAKE_CARD)
+            //{
+            //    lbHeader.Text = "label1";
+            //    lbRow1.Text = "label1";
+            //    lbRow2.Text = "label1";
+            //    lbRow3.Text = "label1";
+            //}
+
+            //else if (paymentState == PaymentState.PS_PIN)
+            //{
+            //    lbHeader.Text = "label1";
+            //    lbRow1.Text = "label1";
+            //    lbRow2.Text = "label1";
+            //    lbRow3.Text = "label1";
+
+            //}
+            //else if (paymentState == PaymentState.PS_FINISHED)
+            //{
+            //     lbHeader.Text = "label1";
+            //    lbRow1.Text = "label1";
+            //    lbRow2.Text = "label1";
+            //    lbRow3.Text = "label1";
+            //}
+            //else
+            //{
+            //    lbHeader.Text = "label1";
+            //    lbRow1.Text = "label1";
+            //    lbRow2.Text = "label1";
+            //    lbRow3.Text = "label1";
+            //}
         }
 
         private void MainPolishTranslation()

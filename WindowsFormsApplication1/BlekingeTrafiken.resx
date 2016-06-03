@@ -524,10 +524,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1294, 435</value>
+    <value>1294, 414</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>513, 336</value>
+    <value>513, 357</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -548,7 +548,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 277</value>
+    <value>1, 305</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>513, 20</value>
@@ -572,7 +572,7 @@
     <value>0</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 235</value>
+    <value>1, 263</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>513, 20</value>
@@ -629,10 +629,10 @@
     <value>Microsoft Sans Serif, 18pt</value>
   </data>
   <data name="TotalPristLb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 252</value>
+    <value>17, 280</value>
   </data>
   <data name="TotalPristLb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 29</value>
+    <value>94, 34</value>
   </data>
   <data name="TotalPristLb.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -652,42 +652,6 @@
   <data name="&gt;&gt;TotalPristLb.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="lbRow3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbRow3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 20pt</value>
-  </data>
-  <data name="lbRow3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbRow3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 524</value>
-  </data>
-  <data name="lbRow3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 31</value>
-  </data>
-  <data name="lbRow3.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="lbRow3.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="lbRow3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbRow3.Name" xml:space="preserve">
-    <value>lbRow3</value>
-  </data>
-  <data name="&gt;&gt;lbRow3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbRow3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbRow3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="TotalPris.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -695,10 +659,10 @@
     <value>Microsoft Sans Serif, 18pt</value>
   </data>
   <data name="TotalPris.Location" type="System.Drawing.Point, System.Drawing">
-    <value>413, 252</value>
+    <value>413, 279</value>
   </data>
   <data name="TotalPris.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 29</value>
+    <value>22, 34</value>
   </data>
   <data name="TotalPris.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -721,78 +685,6 @@
   <data name="&gt;&gt;TotalPris.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="lbRow2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbRow2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 20pt</value>
-  </data>
-  <data name="lbRow2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbRow2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 469</value>
-  </data>
-  <data name="lbRow2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 31</value>
-  </data>
-  <data name="lbRow2.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="lbRow2.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="lbRow2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbRow2.Name" xml:space="preserve">
-    <value>lbRow2</value>
-  </data>
-  <data name="&gt;&gt;lbRow2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbRow2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbRow2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lbRow1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbRow1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 20pt</value>
-  </data>
-  <data name="lbRow1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbRow1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 414</value>
-  </data>
-  <data name="lbRow1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 31</value>
-  </data>
-  <data name="lbRow1.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="lbRow1.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="lbRow1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbRow1.Name" xml:space="preserve">
-    <value>lbRow1</value>
-  </data>
-  <data name="&gt;&gt;lbRow1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbRow1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbRow1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="noofDF_Total.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -803,7 +695,7 @@
     <value>413, 198</value>
   </data>
   <data name="noofDF_Total.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 29</value>
+    <value>22, 34</value>
   </data>
   <data name="noofDF_Total.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -836,7 +728,7 @@
     <value>413, 149</value>
   </data>
   <data name="noofB_Total.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 29</value>
+    <value>22, 34</value>
   </data>
   <data name="noofB_Total.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -869,7 +761,7 @@
     <value>413, 100</value>
   </data>
   <data name="noofV_Total.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 29</value>
+    <value>22, 34</value>
   </data>
   <data name="noofV_Total.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -902,7 +794,7 @@
     <value>281, 198</value>
   </data>
   <data name="noofDF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 29</value>
+    <value>22, 34</value>
   </data>
   <data name="noofDF.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -932,7 +824,7 @@
     <value>281, 149</value>
   </data>
   <data name="noofBung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 29</value>
+    <value>22, 34</value>
   </data>
   <data name="noofBung.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -962,7 +854,7 @@
     <value>281, 100</value>
   </data>
   <data name="noofV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 29</value>
+    <value>22, 34</value>
   </data>
   <data name="noofV.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -992,7 +884,7 @@
     <value>17, 198</value>
   </data>
   <data name="familjtLb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 29</value>
+    <value>119, 34</value>
   </data>
   <data name="familjtLb.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1022,7 +914,7 @@
     <value>17, 149</value>
   </data>
   <data name="barntLb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 29</value>
+    <value>161, 34</value>
   </data>
   <data name="barntLb.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1052,7 +944,7 @@
     <value>17, 100</value>
   </data>
   <data name="VuxentLb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 29</value>
+    <value>79, 34</value>
   </data>
   <data name="VuxentLb.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1104,6 +996,114 @@
   </data>
   <data name="&gt;&gt;TicketTitle.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="lbRow3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbRow3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="lbRow3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbRow3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 524</value>
+  </data>
+  <data name="lbRow3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 37</value>
+  </data>
+  <data name="lbRow3.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lbRow3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lbRow3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbRow3.Name" xml:space="preserve">
+    <value>lbRow3</value>
+  </data>
+  <data name="&gt;&gt;lbRow3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbRow3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbRow3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbRow2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbRow2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="lbRow2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbRow2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 469</value>
+  </data>
+  <data name="lbRow2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 37</value>
+  </data>
+  <data name="lbRow2.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lbRow2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lbRow2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbRow2.Name" xml:space="preserve">
+    <value>lbRow2</value>
+  </data>
+  <data name="&gt;&gt;lbRow2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbRow2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbRow2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbRow1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbRow1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="lbRow1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbRow1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 414</value>
+  </data>
+  <data name="lbRow1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 37</value>
+  </data>
+  <data name="lbRow1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lbRow1.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lbRow1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbRow1.Name" xml:space="preserve">
+    <value>lbRow1</value>
+  </data>
+  <data name="&gt;&gt;lbRow1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbRow1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbRow1.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="button6Poland.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -1177,23 +1177,23 @@
   <data name="&gt;&gt;button8English.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 36pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 191</value>
+    <value>171, 188</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>834, 55</value>
+    <value>1363, 55</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Köp bussbiljett till Karlskrona centrum </value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1207,23 +1207,23 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 24pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>656, 263</value>
+    <value>442, 260</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>394, 37</value>
+    <value>821, 37</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Biljetten gäller i 24 timmar.</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -1979,7 +1979,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="vuxenBtnPrisLable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 21</value>
+    <value>33, 24</value>
   </data>
   <data name="vuxenBtnPrisLable.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -2744,7 +2744,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="barnBtnPrisLable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 21</value>
+    <value>33, 24</value>
   </data>
   <data name="barnBtnPrisLable.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -2783,7 +2783,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="familjBtnPrisLable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 21</value>
+    <value>33, 24</value>
   </data>
   <data name="familjBtnPrisLable.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -2816,7 +2816,7 @@
     <value>442, 359</value>
   </data>
   <data name="lbHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 31</value>
+    <value>19, 37</value>
   </data>
   <data name="lbHeader.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -2888,10 +2888,10 @@
     <value>21</value>
   </data>
   <data name="pbCardTypeImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 843</value>
+    <value>44, 840</value>
   </data>
   <data name="pbCardTypeImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 106</value>
+    <value>453, 106</value>
   </data>
   <data name="pbCardTypeImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>

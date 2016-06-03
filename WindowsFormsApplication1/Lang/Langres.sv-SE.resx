@@ -168,4 +168,22 @@
     <value>2 Vuxen + 3 Barn
 43,00 SEK</value>
   </data>
+  <data name="btNo" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="btYes" xml:space="preserve">
+    <value>Fortsätt</value>
+  </data>
+  <data name="lbHeader" xml:space="preserve">
+    <value>Tryck fortsätt</value>
+  </data>
+  <data name="lbRow1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbRow2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbRow3" xml:space="preserve">
+    <value />
+  </data>
 </root>
