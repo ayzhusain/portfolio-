@@ -47,8 +47,6 @@ namespace WindowsFormsApplication1
         private int kiosk_PORT = 6001;
         public int receipt_ID;
 
-
-
         //Language Flags
         bool transflags = false;
         int transCode = 48;
@@ -61,12 +59,11 @@ namespace WindowsFormsApplication1
         private PaymentState paymentState;
         private int finishedCounter;
 
-        
+        //Constructor 
         public BlekingeTrafiken()
         {
 
             InitializeComponent();
-
 
             InitPayment(GPayment.PaymentProvider.NetsBAXI);
             m_bInit = false;
@@ -74,9 +71,11 @@ namespace WindowsFormsApplication1
             transCode = 48;
             yesButtonPresser = new ButtonTimer(this, PressYesButton);
         }
-
+        
+        //Translation [ Data Members ]
         private PaymentTexts englishTexts, swedishTexts, polishTexts;
-
+        
+        //Main Interface Initializer init
         private void Form1_Load(object sender, EventArgs e)
         {
             DoubleBuffered = true;
@@ -90,9 +89,9 @@ namespace WindowsFormsApplication1
 
             m_paymentProvider.PspInfo.ComPort = -1;
             m_paymentProvider.PspInfo.AccountId = "";
-            m_paymentProvider.PspInfo.TerminalId = "77175302";
-            //m_paymentProvider.PspInfo.TerminalId = "33136452";
-            m_paymentProvider.PspInfo.AccountId = "64212353";
+            m_paymentProvider.PspInfo.TerminalId = "00000000";
+            //m_paymentProvider.PspInfo.TerminalId = "00000000";
+            m_paymentProvider.PspInfo.AccountId = "0000000";
 
 
             if (m_paymentProvider.PspInfo.IP != "")
@@ -146,35 +145,6 @@ namespace WindowsFormsApplication1
             vuxenBtnPrisLable.Text = vuxen.ToString() + " SEK";
             barnBtnPrisLable.Text = "7 - 19 år" + "\n" + barn.ToString() + " SEK";
             familjBtnPrisLable.Text = "2 Vuxen + 3 Barn " + "\n" + familj.ToString() + " SEK";
-
-            //Custom Font... Bermeno
-
-            //PrivateFontCollection pfc = new PrivateFontCollection();
-            //pfc.AddFontFile("C:/Users/Ayazhussain/Desktop/BiljittTerminalData/BarmenoFull/BFM_____.TTF");
-
-            //foreach (Control c in this.Controls)
-            //{
-            //    c.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
-            //    //c.Font = new Font(pfc.Families[0], c.Font.Size, c.Font.Style);
-
-            //}
-
-            //barnBtnPrisLable.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //barntLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //familjBtnPrisLable.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //familjtLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //groupBox1.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //TotalPristLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //VuxentLb.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-
-            //label1.Font = new Font(pfc.Families[0], 36, FontStyle.Regular);
-            //label2.Font = new Font(pfc.Families[0], 24, FontStyle.Regular);
-            //lbHeader.Font = new Font(pfc.Families[0], 20, FontStyle.Regular);
-            //lbRow1.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //lbRow2.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-            //lbRow3.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
-
-            
 
             InitializeTranslations();
             ReplaceFonts();
@@ -240,23 +210,17 @@ namespace WindowsFormsApplication1
            
 
             //PrivateFontCollection pfc = new PrivateFontCollection();
-           
-
             //foreach (Control c in this.Controls)
             //{
             //    //c.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
             //    c.Font = new Font(pfc.Families[0], c.Font.Size, c.Font.Style);
-
             //}
 
-
-
             //ReplaceFont(this.Controls, pfc.Families[0]);
-
         }
+        
             //private void ReplaceFont(ControlCollection oCtrls, Font oFont)
             //{
-
             //    foreach (Control c in oCtrls)
             //    {
             //        c.Font = new Font(oFont, c.Font.Size, c.Font.Style);
@@ -265,6 +229,7 @@ namespace WindowsFormsApplication1
             //            ReplaceFont(c.Controls, oFont);
             //    }
             //}
+            
         private void InitializeTranslations()
         {
             englishTexts = new PaymentTexts(44);
@@ -277,8 +242,8 @@ namespace WindowsFormsApplication1
         private void Status(object info, int v1, string v2)
         {
             MessageBox.Show("I am Status" + info + v1 + v2);
-
         }
+        
         private enum eStatusType
         {
             Info = 0,
@@ -287,9 +252,9 @@ namespace WindowsFormsApplication1
             Database
         }
 
+        //Receipt print
         private String GetReceiptHeader()
         {
-
             StringBuilder sHeadertext = new StringBuilder("BILJETT / BILET / TICKET\n24 TIM KARLSKRONA\n");
             if (noofBarn > 0)
             {
@@ -314,14 +279,13 @@ namespace WindowsFormsApplication1
         {
             //New Payment
             m_paymentProvider = new GPayment(paymentProvider, kiosk_ID, LogLevel.LOG_DETAILED);
-
-            m_paymentProvider.PspInfo.TerminalId = "33136452";
+            m_paymentProvider.PspInfo.TerminalId = "0000000";
             m_paymentProvider.TopMost = false;
 
             //PSP data
             //m_paymentProvider.PspInfo.
-            //m_paymentProvider.PspInfo.TerminalId = "33136452";
-            //m_paymentProvider.PspInfo.AccountId = "64212353";
+            //m_paymentProvider.PspInfo.TerminalId = "0000000";
+            //m_paymentProvider.PspInfo.AccountId = "0000000";
             //m_paymentProvider.PspInfo.IP = kiosk_IP;
             //m_paymentProvider.PspInfo.NetPort = kiosk_PORT;
 
@@ -353,15 +317,12 @@ namespace WindowsFormsApplication1
             m_paymentProvider.Receipts.PrinterName = "CUSTOM VKP80 II";
             m_paymentProvider.Receipts.PrintCustomerToPrinter = true;
 
-            
-
             string ftagNamn = "Blekingetrafiken";
             string ftageAdd = "";
             string ftagCity = "www.blekingetrafiken.se";
             string ftagFon = "+46 455 569 00";
 
             m_paymentProvider.Receipts.SetMerchantData(ftagNamn,ftageAdd,ftagCity,ftagFon,"");
-
 
             //Skinning example
             //m_paymentProvider.Skin.BackgroundImage = new Bitmap("bg_no_flags.jpg");
@@ -376,13 +337,11 @@ namespace WindowsFormsApplication1
             //Critical, sets receipt number
             m_paymentProvider.ReceiptEvent += new ReceiptEventHandler(m_paymentProvider_ReceiptEvent);
 
-
             ////Write tickets, produce slips, open gates or load giftcards here
             m_paymentProvider.ProduceProductEvent += new ProduceProductEventHandler(m_paymentProvider_ProduceProductEvent);
 
             ////Payment is complete and the form is closed
             m_paymentProvider.PaymentCompleteEvent += new PaymentCompleteEventHandler(m_paymentProvider_PaymentCompleteEvent);
-
 
             //////PSP logs regarding voids, purchases etc
             m_paymentProvider.DatabaseEvent += new DatabaseEventHandler(m_paymentProvider_DatabaseEvent);
@@ -412,9 +371,6 @@ namespace WindowsFormsApplication1
             //familjBtnPrisLable.MouseMove += new MouseEventHandler(change_Btn_Color);
             //barnBtnPrisLable.MouseMove += new MouseEventHandler(change_Btn_Color);
 
-
-
-
         }
 
         void PressYesButton(object sender, EventArgs e)
@@ -426,6 +382,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        
         void m_paymentProvider_InfoEvent(object sender, InfoEventArgs e)
         {
 
@@ -577,8 +534,6 @@ namespace WindowsFormsApplication1
             return nRet;
         }
 
-
-
         /// <summary>
         /// Payment is requesting a receipt id
         /// </summary>
@@ -608,12 +563,15 @@ namespace WindowsFormsApplication1
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// <returns></returns>
+        
         bool m_paymentProvider_DatabaseEvent(object sender, DatabaseEventArgs e)
         {
-
             string sReceiptId = m_paymentProvider.Data.ReceiptId;
             int nReceiptId = 0;
-            try { nReceiptId = int.Parse(sReceiptId); }
+            try 
+            { 
+                nReceiptId = int.Parse(sReceiptId); 
+            }
             catch { }
 
             decimal fAmount = m_paymentProvider.Data.Products.TotalPrice;
@@ -677,6 +635,7 @@ namespace WindowsFormsApplication1
             return true;
         }
 
+
         /// <summary>
         /// Payment is requesting that we write to the log
         /// </summary>
@@ -727,14 +686,15 @@ namespace WindowsFormsApplication1
                 Status(eStatusType.Log, 1, string.Format("Printer Name: {0}  Status: {1}  State:{2} ", m_paymentProvider.Receipts.SelectedPrinter, oStatus, oState));
             }
 
-
         }
+        
         /// <summary>
         /// We got a cardcode
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// <returns></returns>
+        
         bool m_paymentProvider_CardCodeEvent(object sender, CardCodeEventArgs e)
         {
             if (e.RemoveCard)
@@ -747,11 +707,12 @@ namespace WindowsFormsApplication1
             }
             return false;
         }
+        
         void m_paymentProvider_ActivationEvent(object sender, EventArgs e)
         {
             Status(eStatusType.Info, 0, "Pinpad requires activation, press code + OK on the pinpad!");
-
         }
+        
         void Non_Visible_Buttons()
         {
             btnVuxen.Visible = false;
@@ -780,6 +741,7 @@ namespace WindowsFormsApplication1
             vuxenBtnPrisLable.Show();
 
         }
+        
         //Fortsatt button
         private void button5_Click(object sender, EventArgs e)
         {
@@ -801,7 +763,6 @@ namespace WindowsFormsApplication1
                     finishedCounter = 2;
                     Non_Visible_Buttons();
                     guiState = GUI_STATE.TERMINAL_GUI;
-
                 }
 
             }
@@ -837,8 +798,6 @@ namespace WindowsFormsApplication1
         /// <returns></returns>
         public bool BeginPurchase()
         {
-
-
             //Använd interface?
             m_paymentProvider.UseGUI = false;
 
@@ -863,7 +822,6 @@ namespace WindowsFormsApplication1
 
             //Skapa testprodukt
             Gordion.Payment.Products oProducts = new Products();
-
 
             //Momssatstest med olika momssatser
 
@@ -899,7 +857,6 @@ namespace WindowsFormsApplication1
 
         private void textHandlingOnScreen()
         {
-
             if (transCode == 44)
             {
                 //English_Labels_Translation();                
@@ -1143,8 +1100,6 @@ namespace WindowsFormsApplication1
         }
 
 
-
-
         /// <summary>
         /// Buttons, Barn, Vuxen o Familj
         /// </summary>
@@ -1237,7 +1192,6 @@ namespace WindowsFormsApplication1
             Assembly a = Assembly.Load("WindowsFormsApplication1");
             ResourceManager rm = new ResourceManager("WindowsFormsApplication1.Lang.Langres", a);
            
-
             label1.Text = rm.GetString("label1", ci);
             label2.Text = rm.GetString("label2", ci);
             TicketTitle.Text = rm.GetString("TicketTitle", ci);
